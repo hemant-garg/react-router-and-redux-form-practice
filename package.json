@@ -2,7 +2,7 @@
   "name": "blogger",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://hemant-garg.github.io/react-router-practice",
+  "homepage": "https://hemant-garg.github.io/react-router-and-redux-form-practice",
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.1.2",
