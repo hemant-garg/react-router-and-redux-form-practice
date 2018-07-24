@@ -11,6 +11,7 @@ import promise from 'redux-promise';
 import Home from './components/Home';
 import NewPost from './components/newpost';
 import ActivePost from './components/active_post';
+import { HOME_URL } from './actions';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
@@ -19,9 +20,9 @@ ReactDOM.render(
 		<BrowserRouter>
 			<div>
 			<Switch>
-				<Route path="/post/new" component={NewPost} />
-				<Route path="/post/:id" component={ActivePost} />
-				<Route path="/" component={Home} />
+				<Route path={`${HOME_URL}/post/new`} component={NewPost} />
+				<Route path={`${HOME_URL}/post/:id`} component={ActivePost} />
+				<Route path={HOME_URL} component={Home} />
 			</Switch>
 			</div>
 		</BrowserRouter>

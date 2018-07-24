@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import {Link} from 'react-router-dom';
 import { connect } from 'react-redux';
-import { createPost } from '../actions';
+import { createPost, HOME_URL } from '../actions';
 
 
 class NewPost extends Component {
@@ -25,7 +25,7 @@ class NewPost extends Component {
   }
 
   onSubmit(values){
-    this.props.createPost(values, () => this.props.history.push('/'));
+    this.props.createPost(values, () => this.props.history.push(HOME_URL));
 
   } 
 
@@ -51,7 +51,7 @@ class NewPost extends Component {
           component={this.renderField}
         />
         <button className="btn btn-success mr-3" type="Submit"> Submit </button>
-        <Link to="/" className="btn btn-danger"> Cancel </Link>
+        <Link to={HOME_URL} className="btn btn-danger"> Cancel </Link>
       </form>
       </div>
     );
